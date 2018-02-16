@@ -247,6 +247,11 @@ nav li a:hover:not(.active) {
   #Gameboy{margin-top: 60%;}
   .tab button {font-size: 18px; padding: 16px 20px; grid-column-gap:40px;}
 }
+@media screen and (max-width: 400px) {
+  h1 {margin-top: 90%;font-size: 1.2em;}
+  #Gameboy{margin-top: 80%; margin-left: -15%;}
+  #pokemonResults {margin-left: 2%; margin-right: -20%;}
+}
 
 
 /* Black and white, like the old days */

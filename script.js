@@ -133,6 +133,9 @@ $( ".type" ).mouseleave(function() {
 function jsUcfirst(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
+function jsLcfirst(string) {
+    return string.charAt(0).toLowerCase() + string.slice(1);
+}
 function BraceToSpace(string) {
     return string.replace(/-/g, " ");
 }
@@ -151,7 +154,7 @@ $(document).ready(function() {
         e.preventDefault();
         /*var form = $("#pokemonForm").val(); */
         var form = "pokemon";
-        var value = $("#pokemonInput").val();
+        var value = jsLcfirst($("#pokemonInput").val());
         var myurl = "https://pokeapi.co/api/v2/" + form + "/" + value + "/";
         /*
         */
@@ -213,7 +216,7 @@ $(document).ready(function() {
         e.preventDefault();
         /*var form = $("#pokemonForm").val(); */
         var form = "item";
-        var value = SpaceToBrace($("#itemInput").val());
+        var value = jsLcfirst(SpaceToBrace($("#itemInput").val()));
         var myurl = "https://pokeapi.co/api/v2/" + form + "/" + value + "/";
         /*
         */
