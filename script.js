@@ -186,7 +186,8 @@ $(document).ready(function() {
               moves += "</p>";
               results += moves;
               results += "<p class='right-side'>";
-              results += '<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + value + '.png" class="pokeSprities"/>';
+              var picture = json.sprites.front_default;
+              results += '<img src=' + picture + ' class="pokeSprities"/>';
               results += "</p>";
             }
             $("#pokemonResults").html(results);
