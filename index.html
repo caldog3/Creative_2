@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="pokeball.png">
+<link rel="stylesheet" href="/styles.css">
+<title>Pokemon Stuff</title>
+</head>
+<div id="outerborder">
+<body>
+  <nav>
+    <ul>
+      <li>ASH's Pok&eacute;dex</li>
+    </ul>
+  </nav>
+
+<div class="tab">
+  <button class="tablinks" onclick="openOption(event, 'Pokemon')" id="defaultOpen">POK&eacute;MON</button>
+  <button class="tablinks" onclick="openOption(event, 'Item')">ITEM</button>
+  <button class="tablinks" onclick="openOption(event, 'Type')">TYPE</button>
+  <button class="tablinks" onclick="openOption(event, 'Map')">MAP</button>
+  <button class="tablinks" onclick="openOption(event, 'Gameboy')" id="bottomTab">GAMEBOY</button>
+</div>
+
+<div id="Map" class="tabcontent">
+  <h1>Map of all regions</h1>
+  <img src="worldMap.jpg">
+
+</div>
+
+<div id="Gameboy" class="tabcontent">
+  <p class="instruction" style="text-align: center"><br>Press the tiny start<br> button to begin.</p>
+  <p style="text-align: center"><br><br>A PEN BY Tristan Brookes</p>
+<div id="shell">
+	<div id="bezel">
+		<div id="screen">
+			<div id="gengar"></div>
+			<div id="jigglypuff"></div>
+		</div>
+		<div id="power">Power</div>
+	</div>
+	<div id="brand">Nintendo</div>
+	<div id="dpad"></div>
+	<div id="buttons">
+		<div id="b-button">B</div>
+		<div id="a-button">A</div>
+	</div>
+	<div id="function-buttons">
+		<div id="select">Select</div>
+		<a id="start" onclick="start()">Start</a>
+	</div>
+</div>
+<audio id="music" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/184287/pokemans.mp3">
+  <div id="pokedexResults"></div>
+</div>
+
+<div id="Type" class="tabcontent">
+  <h1>Types</h1>
+  <form>
+    <label id="print"><br>Look at the different Pok&eacute;mon types!</label><br><br>
+    <div class="typeHeight">
+    <div class="type normal left">Normal</div>
+    <div class="type fire left">Fire</div>
+    <div class="type water left">Water</div>
+    <div class="type electric left">Electric</div>
+    <div class="type grass left">Grass</div>
+    <div class="type ice left">Ice</div>
+    <div class="type ground left">Ground</div>
+    <div class="type flying left">Flying</div>
+    <div class="type fairy left">Fairy</div>
+    <div class="type ghost left">Ghost</div>
+    <div class="type rock left">Rock</div>
+    <div class="type fighting left">Fighting</div>
+    <div class="type poison left">Poison</div>
+    <div class="type psychic left">Psychic</div>
+    <div class="type bug left">Bug</div>
+    <div class="type dark left">Dark</div>
+    <div class="type steel left">Steel</div>
+    <div class="type dragon left">Dragon</div>
+    <div class="type left">???</div>
+    <div class="clear"></div>
+    <h2>Some examples:</h2>
+    <p><br><div class="type fire">Fire</div> is weak to <div class="type water">Water</div></p>
+    <p><br><div class="type dragon">Dragon</div> is weak to <div class="type ice">Ice</div></p>
+    <p><br><div class="type psychic">Psychic</div> is weak to <div class="type ghost">Ghost</div></p>
+  </div>
+</form>
+</div>
+
+<div id="Item" class="tabcontent">
+  <h1><br>Item</h1>
+  <form>
+    <label id="print"><br>Enter an item name:</label><br><br>
+    <input id="itemInput" type="text"><br><br>
+    <input id="itemSubmit" type="submit" value="Check">
+  </form><br>
+  <div id="itemResults"></div>
+</div>
+
+<div id="Pokemon" class="tabcontent">
+  <h1>Pok&eacute;mon</h1>
+  <form>
+    <label id="print"><br>Enter a Pok&eacute;mon by name or number:</label><br><br>
+    <input id="pokemonInput" type="text"><br><br>
+    <input id="pokemonSubmit" type="submit" value="Check">
+  </form>
+  <p><br></p>
+  <div id="pikachu"></div>
+  <div id="ash"></div><br>
+  <div id="pokemonResults">
+      <div class="pokeball">
+      <div class="pokeball__button"></div>
+      </div>
+  </div>
+</div>
+
+
+
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+<script>
+function openOption(evt, option) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(option).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+<script>document.getElementById("defaultOpen").click();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<!--
+<script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+<script> const P = new Pokedex.Pokedex(); </script> -->
+<footer>
+  <p><a href="https://github.com/caldog3/Creative_2.git"> My Github</a><p>
+</footer>
+</body>
+</div>
+</html>
