@@ -215,6 +215,10 @@ nav li a:hover:not(.active) {
     text-shadow: 1px 1px 0 #fff;
 
 }
+.pokeNum {
+  margin-left: 80%;
+  margin-top: -20px;
+}
 .sprities {
   height: 100px;
   text-align: center;
@@ -222,8 +226,9 @@ nav li a:hover:not(.active) {
 }
 .pokeSprities {
   height: 300px;
-  text-align: center;
-  margin-left: 40%;
+  text-align: right;
+  margin-left: 48%;
+  margin-top: -200px;
 }
 #Gameboy{margin-left: -20%;}
 

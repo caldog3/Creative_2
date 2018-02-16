@@ -170,13 +170,15 @@ $(document).ready(function() {
             if (form === "pokemon") {
               var name = json.name;
               name = jsUcfirst(name);
+              results += "<h2 class='pokeNum'>#" + json.id + "</h2>";
               results += "<h2 class='poke-name' id='its-name'>" + name
-                + ":</h2><br>" + "<h2 class='type " + json.types[0].type.name + "'>" + jsUcfirst(json.types[0].type.name) +" </h2>";
+                + ":</h2><br>" + "<h2 class='type " + json.types[0].type.name + "'>" + jsUcfirst(json.types[0].type.name) + " </h2>";
               if (json.types.length > 1) {
                 for (var i = 0; i < json.types.length - 1; ++i) {
                   results += "<h2 class='type " + json.types[i + 1].type.name + "'>" + jsUcfirst(json.types[i + 1].type.name) + " </h2>";
                 }
               }
+
               var moves = "<p class = 'moves'><br>";
               for (var i = 0; i < 4; ++i) {
                 moves +=i + 1 + ":";
